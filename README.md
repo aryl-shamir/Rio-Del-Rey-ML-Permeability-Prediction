@@ -215,7 +215,7 @@ shap_values, explainer = compute_shap_values(xgb_only_model, X_test_for_shap)
 plot_summary(shap_values, X_test_for_shap_named)
 ```
 
-## Data
+## 10. Data
 
 The `data/` folder contains three files:
 
