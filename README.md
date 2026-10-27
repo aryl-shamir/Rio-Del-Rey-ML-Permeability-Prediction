@@ -27,7 +27,7 @@ without requiring you to cross-reference the manuscript's figures or section num
 7. [How to use this code](#7-how-to-use-this-code)
 8. [Quick test (no real data needed)](#8-quick-test-no-real-data-needed)
 9. [The three models, explained, shap interpretability](#9-the-three-models-explained)
-10. [Data availability](#10-data-availability)
+10. [Data](#10-data)
 11. [Reproducibility notes](#11-reproducibility-notes)
 12. [Troubleshooting](#12-troubleshooting)
 13. [License](#13-license)
@@ -215,20 +215,17 @@ shap_values, explainer = compute_shap_values(xgb_only_model, X_test_for_shap)
 plot_summary(shap_values, X_test_for_shap_named)
 ```
 
-## 10. Data availability
+## Data
 
-The real well-log data used to train and test these models is proprietary — it was shared by
-the operating company under a confidentiality agreement and cannot be redistributed publicly.
-For that reason, the `data/` folder is intentionally excluded from this repository (see
-`.gitignore`).
+The `data/` folder contains three files:
 
-This does **not** affect the code itself: everything in `src/`, `notebooks/`, and `tests/` is
-complete and runnable. To make sure of that, a small synthetic dataset with the same column
-structure is bundled with `tests/quick_test.py`, so anyone can confirm the pipeline works
-correctly without needing the real data (see Section 8).
+* `k_puit_4.csv` — well-log data for well P4
+* `k_puit_5.csv` — well-log data for well P5
+* `combined_well.csv` — the merged dataset (P4 and P5 combined), used directly in the main analysis notebook
 
-If you need access to the original data for research purposes, contact the corresponding
-author — access may be possible through a separate data-use agreement with the data owner.
+Each file includes the full set of wireline log measurements (GR, NPHI, RHOB, ILD, CAL, DT, SP) alongside the target variable, log-transformed permeability (`logK`).
+
+A separate, small synthetic dataset is bundled with `tests/quick_test.py`, allowing anyone to quickly verify that the code runs correctly end to end, without needing to run the full analysis on the complete dataset.
 
 ## 11. Reproducibility notes
 
