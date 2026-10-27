@@ -223,7 +223,7 @@ The `data/` folder contains three files:
 * `k_puit_5.csv` — well-log data for well P5
 * `combined_well.csv` — the merged dataset (P4 and P5 combined), used directly in the main analysis notebook
 
-Each file includes the full set of wireline log measurements (GR, NPHI, RHOB, ILD, CAL, DT, SP) alongside the target variable, log-transformed permeability (`logK`).
+Each file includes the full set of wireline log measurements (GR, NPHI, RHOB, ILD, CAL, DT, SP) alongside the target variable, permeability (`K`), transformed into log-transformed permeability (`logK`).
 
 A separate, small synthetic dataset is bundled with `tests/quick_test.py`, allowing anyone to quickly verify that the code runs correctly end to end, without needing to run the full analysis on the complete dataset.
 
