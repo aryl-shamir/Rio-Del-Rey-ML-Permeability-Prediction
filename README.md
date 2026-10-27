@@ -240,7 +240,7 @@ author — access may be possible through a separate data-use agreement with the
 - Exact dependency versions are pinned (`pyproject.toml` / `uv.lock`) so results don't drift
   due to library updates over time.
 
-## 12. Troubleshooting
+## 12. Troubleshooting.
 
 - **`ModuleNotFoundError`** — make sure your virtual environment is activated
   (`source .venv/Scripts/activate` or `uv run ...`) and that installation finished without
