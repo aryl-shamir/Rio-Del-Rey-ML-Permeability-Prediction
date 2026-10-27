@@ -66,7 +66,7 @@ This project trains and compares three models with different strengths:
 
 ```
 Permeability-Prediction/
-├── data/                          # Not included in this public repo — see Section 10
+├── data/                          
 ├── notebooks/
 │   ├── permeability_prediction.ipynb   # Main entry point: run this to see the full workflow
 │   └── results/
